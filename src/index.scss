@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* === Plugin styles === */
+
+@import "~react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
+@import '~react-bootstrap-typeahead/css/Typeahead.css';
+@import '~react-bootstrap-typeahead/css/Typeahead-bs4.css';
+@import '~react-datepicker/dist/react-datepicker.css';
+
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+@import "./assets/variables";
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/animate";
+@import "~bootstrap/scss/bootstrap";
+@import "./assets/fonts";
+@import "./assets/functions";
+
+
+/* === Icon fonts === */
+@import "~@mdi/font/scss/materialdesignicons";
+
+@import "./assets/blockqoute";
+
+
+@import "./assets/background";
+@import "./assets/typography";
+@import "./assets/reset";
+@import "./assets/responsive";
+@import "./assets/misc";
+@import "./assets/utilities";
+@import "./assets/spinner";
+
+@import "./assets/_footer.scss";
+@import "./assets/_layout.scss";
+@import "./assets/_navbar.scss";
+@import "./assets/_settings-panel.scss";
+@import "./assets/_sidebar.scss";
+@import "./assets/_auth.scss";
+
+html, body, #root, #root > div{
+  height: 100%;
+}
