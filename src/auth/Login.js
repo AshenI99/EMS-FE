@@ -32,6 +32,7 @@ const Login=()=>{
       });
 
       localStorage.setItem("token", res.toString());
+      window.location.reload();
 
     } catch (err) {
 
@@ -55,7 +56,7 @@ const Login=()=>{
                     <input type="email" id="email" placeholder="Email"  onChange={onChangeHandler} value={formState.email} required className="form-control form-control-lg"  />
                   </div>
                   <div className="form-group">
-                    <input type="text" id="password" placeholder="Password" onChange={onChangeHandler} value={formState.password} required className="form-control form-control-lg"  />
+                    <input type="password" id="password" placeholder="Password" onChange={onChangeHandler} value={formState.password} required className="form-control form-control-lg"  />
                   </div>
                   <div className="mt-3">
                     <Button className="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit">SIGN IN</Button>

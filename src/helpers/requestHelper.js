@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_API_ENDPOINT;
+const baseURL = "http://ec2-54-174-181-46.compute-1.amazonaws.com/api/";
 
 const request = async (config) => {
     let defaultHeaders = {}

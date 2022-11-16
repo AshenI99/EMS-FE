@@ -3,6 +3,7 @@ import request from "../helpers/requestHelper";
 import {useNavigate, useParams} from "react-router-dom";
 import moment from "moment";
 import {Button} from "react-bootstrap";
+import Layout from "../layout";
 
 const ExamDetails=()=>{
 
@@ -38,7 +39,7 @@ const ExamDetails=()=>{
                 method: 'POST',
             });
 
-            history("/exams")
+            history("/my-exams")
 
         } catch (err) {
 
@@ -46,7 +47,7 @@ const ExamDetails=()=>{
     }
 
     return(
-        <div>
+        <Layout>
             <div className="card mb-3">
                 <div className="card-body pt-4 pb-4 pr-5 pl-5">
                     <div className='display-4 pt-0 font-weight-normal'>{examDetails?.name}</div>
@@ -56,8 +57,8 @@ const ExamDetails=()=>{
             <div className='stretch-card col-md-6 mx-auto mt-3'>
                 <div className="card">
                     <div className="card-body">
-                        <h2 className="text-primary font-weight-light">{examDetails?.name}</h2>
-                        <p className="card-description">{examDetails?.description}</p>
+                        <h2 className="text-primary font-weight-light text-center">{examDetails?.name}</h2>
+                        <p className="card-description mt-4 text-center">{examDetails?.description}</p>
 
                         <div className="h5 font-weight-light d-flex justify-content-between mt-5"><span className="text-info">Date:</span> {moment(examDetails?.dateTime).utc().format('YYYY-MM-DD')}</div>
                         <div className="h5 font-weight-light d-flex justify-content-between"><span className="text-info">Time:</span> {moment(examDetails?.dateTime).utc().format('hh:mm a')}</div>
@@ -67,7 +68,7 @@ const ExamDetails=()=>{
                     </div>
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 
