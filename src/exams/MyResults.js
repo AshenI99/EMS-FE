@@ -41,7 +41,7 @@ const MyExams=()=>{
             </div>
             {allExams && allExams.length ?
                 <div>
-                    {allExams.filter((exam) => moment().diff(exam.examId.dateTime, 'days') > 2).map((el) =>{
+                    {allExams.filter((exam) => moment().diff(exam.examId.dateTime, 'days') > 2 || exam.result).map((el) =>{
                         return(
                             <div className="col-md-4 grid-margin stretch-card mx-auto">
                                 <div className="card">
@@ -51,7 +51,7 @@ const MyExams=()=>{
 
                                         <div className="h5 font-weight-bold d-flex justify-content-center mt-5 ps-5 pe-5">
                                             <span className="text-info me-4">Result:</span>
-                                            {moment().diff(el.examId.dateTime, 'days') > 2 ? el?.result?.toUpperCase() : 'Pending'}
+                                            {el.result ? el?.result?.toUpperCase() : 'Pending'}
                                         </div>
 
                                     </div>

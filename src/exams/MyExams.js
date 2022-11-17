@@ -57,12 +57,12 @@ const MyExams=()=>{
                                         <div className="h5 font-weight-normal d-flex justify-content-center mt-5 ps-5 pe-5">
                                             <span className="text-info me-4">Status:</span>
                                             {
-                                                moment(el.examId.dateTime).diff(moment.now(), 'days') < 0 ? 'Finished' :
+                                                el?.examId?.isFinished ? 'Finished' :
                                                     moment(el.examId.dateTime).diff(moment.now(), 'days') === 0 ? 'Ongoing' : 'Upcoming'
                                             }
                                         </div>
 
-                                        {moment(el.examId.dateTime).diff(moment.now(), 'days') < 0 ?
+                                        {moment(el.examId.dateTime).diff(moment.now(), 'days') < 0 || el?.examId?.isFinished ?
                                             <Button onClick={onResultNavigate} className="btn-success text-white mt-3 w-100">Check Results</Button>
                                         : ''}
 

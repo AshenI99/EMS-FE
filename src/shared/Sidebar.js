@@ -40,6 +40,13 @@ class Sidebar extends Component {
                     <i className="mdi mdi-book-open-page-variant menu-icon"></i>
                   </Link>
                 </li>
+
+                <li className={ this.isPathActive('/update-exam') ? 'nav-item active' : 'nav-item' }>
+                  <Link className="nav-link" to="/update-exam">
+                    <span className="menu-title">Update Exam Results</span>
+                    <i className="mdi mdi-book-open-page-variant menu-icon"></i>
+                  </Link>
+                </li>
               </>
           :
               <>

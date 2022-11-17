@@ -45,7 +45,7 @@ const AllExams=()=>{
             </div>
             {allExams && allExams.length ?
                 <div className='row'>
-                    {allExams.map((el) =>{
+                    {allExams.filter((el) => !el.isFinished).map((el) =>{
                         return(
                             <div className="col-md-4 grid-margin stretch-card">
                                 <div className="card">
